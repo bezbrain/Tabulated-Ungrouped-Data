@@ -1,0 +1,45 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Tabulated Ungrouped Data</title>
+  </head>
+  <body>
+    <h1 style="text-align: center">
+      Mean, Median and Mode of Tabulated Ungrouped Data
+    </h1>
+    <div>
+      <label for="input-x">Input values of x here:</label>
+      <input
+        type="number"
+        style="width: 50px; text-align: center"
+        class="x-input"
+      />
+      <button class="x-btn btn">save</button>
+      <p>The Numbers you input are: <span class="x-values-input"></span></p>
+    </div>
+
+    <div>
+      <label for="input-x">Input values of f here:</label>
+      <input
+        type="number"
+        style="width: 50px; text-align: center"
+        class="f-input"
+      />
+      <button class="f-btn btn">save</button>
+      <p>The Numbers you input are: <span class="f-values-input"></span></p>
+    </div>
+
+    <div>
+      <button class="mean-btn">Find Mean</button>
+      <p>The mean is: <span class="mean-value"></span></p>
+      <button class="median-btn">Find Median</button>
+      <button class="mode-btn">Find Mode</button>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="./main.js"></script>
+  </body>
+</html>
