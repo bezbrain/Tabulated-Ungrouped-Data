@@ -1,5 +1,113 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Courier New", Courier, monospace;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(44, 44, 33);
+}
+
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+main {
+  text-align: center;
+  font-weight: 700;
+  font-size: 20px;
+  background-color: rgb(71, 71, 34);
+  width: 80%;
+  border-radius: 10px;
+  padding: 30px;
+}
+
+.header {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.input-section div {
+  margin-top: 25px;
+}
+
+.input-section div input {
+  height: 30px;
+  width: 50px;
+  text-align: center;
+  background-color: rgb(71, 71, 34);
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.btn,
+.averages-values button,
+.clear {
+  padding-inline: 10px;
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: 700;
+  background-color: rgb(71, 71, 34);
+  border-radius: 5px;
+  word-spacing: -8px;
+  transition: 0.7s ease all;
+}
+
+.btn:hover,
+.averages-values button:hover,
+.clear:hover {
+  background-color: black;
+  color: rgb(71, 71, 34);
+}
+
+input:focus {
+  outline: 3px solid rgb(58, 51, 51);
+}
+
+.averages-values {
+  width: 55%;
+  border: 8px solid black;
+  margin: 60px auto 30px;
+  border-radius: 15px;
+}
+
+.averages-values div {
+  border-bottom: 2px solid black;
+  margin-top: 20px;
+}
+
+@media screen and (max-width: 700px) {
+  main {
+    width: 95%;
+  }
+  .header {
+    font-size: 6vw;
+  }
+
+  section {
+    font-size: 3.2vw;
+  }
+
+  .averages-values {
+    width: 70%;
+  }
+
+  button {
+    /* color: red; */
+    font-size: 3vw !important;
+    word-spacing: -3px !important;
+    padding-block: 5px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  main {
+    width: 900px;
+  }
 }

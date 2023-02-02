@@ -10,6 +10,7 @@ const findMedian = document.querySelector(".median-btn");
 const medianValue = document.querySelector(".median-value");
 const findMode = document.querySelector(".mode-btn");
 const modeValue = document.querySelector(".mode-value");
+const clear = document.querySelector(".clear");
 
 // =====>>>
 // Program to input x and f values
@@ -110,4 +111,17 @@ function modalClass() {
 
 findMode.onclick = () => {
   modalClass();
+};
+// End of Program to find the Mode
+
+// Clear all Data
+clear.onclick = () => {
+  inputX.value = "";
+  inputF.value = "";
+  xValuesInput.textContent = "";
+  fValuesInput.textContent = "";
+  meanValue.textContent = "";
+  medianValue.textContent = "";
+  modeValue.textContent = "";
+  // console.log("I am cleared");
 };
