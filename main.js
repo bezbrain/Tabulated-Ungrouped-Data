@@ -17,20 +17,22 @@ const clear = document.querySelector(".clear");
 // =====>>>
 let xArr = [];
 // X-Btn
-xBtn.onclick = () => {
+xBtn.onclick = (e) => {
+  e.preventDefault();
   xArr.push(Number(inputX.value));
   xValuesInput.textContent = xArr.join(", ");
   inputX.value = "";
-  // console.log(xArr);
+  console.log(xArr);
 };
 
 let fArr = [];
 // F-Btn
-fBtn.onclick = () => {
+fBtn.onclick = (e) => {
+  e.preventDefault();
   fArr.push(Number(inputF.value));
   fValuesInput.textContent = fArr.join(", ");
   inputF.value = "";
-  // console.log(fArr);
+  console.log(fArr);
 };
 // End of Program to input x and f values
 
@@ -103,10 +105,27 @@ function modalClass() {
   let maxVal = Math.max(...fArr);
   // console.log(maxVal);
   let fArrIndex = fArr.indexOf(maxVal);
-  // console.log(fArrIndex);
+  console.log(fArrIndex);
   let xArrIndex = fArrIndex;
-  let mode = xArr[xArrIndex];
-  modeValue.textContent = mode;
+  let maxVals = fArr.filter((val) => val === maxVal);
+
+  // To find the mode in there are two or more same f as the highest frequencies
+  if (maxVals.length > 1) {
+    let modalFreq = [];
+    for (let i = 0; i < fArr.length; i++) {
+      let maxValueIndices = [];
+      if (fArr[i] === fArr[fArrIndex]) {
+        maxValueIndices.push(i);
+      }
+      console.log(maxValueIndices);
+      xArrIndex = xArr[maxValueIndices];
+      modalFreq.push(xArrIndex);
+      modeValue.textContent = modalFreq.join(", ");
+    }
+  } else {
+    mode = xArr[xArrIndex];
+    modeValue.textContent = mode;
+  }
 }
 
 findMode.onclick = () => {
@@ -123,5 +142,8 @@ clear.onclick = () => {
   meanValue.textContent = "";
   medianValue.textContent = "";
   modeValue.textContent = "";
-  // console.log("I am cleared");
+  xArr = [];
+  fArr = [];
+  console.log(xArr);
+  console.log(fArr);
 };

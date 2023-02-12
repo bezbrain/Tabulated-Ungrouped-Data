@@ -18,14 +18,72 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
+@keyframes emoji-bounce-1 {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes emoji-bounce-2 {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes emoji-bounce-3 {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.emoji-1 {
+  animation: emoji-bounce-1 2s ease-in-out infinite;
+}
+
+.emoji-2 {
+  animation: emoji-bounce-2 3s ease-in-out infinite;
+}
+
+.emoji-3 {
+  animation: emoji-bounce-3 4s ease-in-out infinite;
+}
+
+.emoji {
+  font-size: 50px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
 main {
   text-align: center;
   font-weight: 700;
   font-size: 20px;
-  background-color: rgb(71, 71, 34);
+  background-color: rgb(104, 104, 60);
   width: 80%;
   border-radius: 10px;
   padding: 30px;
+  margin-inline: auto;
+  box-shadow: 6px 5px 0px gold, 5px -5px 6px gray, 0px 6px 6px grey,
+    0px 5px 20px gold;
 }
 
 .header {
@@ -33,11 +91,11 @@ main {
   text-transform: uppercase;
 }
 
-.input-section div {
+.input-section form {
   margin-top: 25px;
 }
 
-.input-section div input {
+.input-section form input {
   height: 30px;
   width: 50px;
   text-align: center;
